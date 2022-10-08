@@ -1,4 +1,5 @@
 import PaginationButtons from "./PaginationButtons";
+import Image from "next/image";
 
 export default function SearchResults({ results }) {
   return (
@@ -15,6 +16,15 @@ export default function SearchResults({ results }) {
             className="max-w-xl py-4 px-3 text-xs mb-4 shadow ring-gray-200 dark:ring-[#303134] dark:ring-1 dark:shadow-3xl ring-2 sm:ring-0 sm:text-base sm:shadow-none rounded-lg"
           >
             <div className="group">
+
+              {/* FIXME Added image component above results. Currently displaying Dummy Data in 'data' folder. Currently broken */}
+              <Image
+              src={`https://img.youtube.com/vi/${result.videoId}/0.jpg`}
+              className="w-225 md:w-300 md:h-100"
+              width={125}
+              height={25}
+              alt=""
+              />
               <a href={result.link} className="text-sml line-clamp-1">
                 {result.formattedUrl}
               </a>
