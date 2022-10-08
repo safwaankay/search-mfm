@@ -19,11 +19,11 @@ export default function SearchResults({ results }) {
 
               {/* FIXME Added image component above results. Currently displaying Dummy Data in 'data' folder. Currently broken */}
               <Image
-              src={`https://img.youtube.com/vi/lfd6M9y9_TI/0.jpg`}
+              src={`https://img.youtube.com/vi/Poc5H6aVTlw/0.jpg`}//${result.videoId}
               className="w-225 md:w-300 md:h-100"
-              width={350}
-              height={250}
-              alt=""
+              width={425}
+              height={310}
+              alt="shipping"
               />
               <a href={result.link} className="text-sml line-clamp-1">
                 {result.formattedUrl}
