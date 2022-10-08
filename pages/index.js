@@ -56,11 +56,11 @@ export default function Home() {
 
         <form className="flex h-96 flex-col items-center justify-center flex-grow w-[80%] sm:w-[90%]">
           <Image
-            src="/../public/img/SearchMFM.png"
+            src="/../public/SearchMFM.png"
             className="w-225 md:w-300 md:h-100"
             width={500}
             height={100}
-            alt=""
+            alt="mfm"
           />
 
           <div className="flex w-full mt-5 hover:shadow focus-within:shadow  max-w-md rounded-full border border-gray-500 md:hover:border-white dark:bg-gray-700md:dark:hover:border-gray-100 px-5 py-2 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl">
