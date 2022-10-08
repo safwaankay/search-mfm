@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "debug": "NODE_OPTIONS='--openssl-legacy-provider' next dev -p 5001"
+    "debug": "next dev -p 5001"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.4",
@@ -24,5 +24,6 @@
     "eslint-config-next": "11.1.2",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.17"
-  }
+  },
+  "proxy": "http://localhost:1337/api/v1/"
 }
