@@ -19,8 +19,7 @@ export default function SearchResults({ results }) {
 
               {/* FIXME Added image component above results. Currently displaying Dummy Data in 'data' folder. Currently broken */}
               <Image
-              src={`https://img.youtube.com/vi/Poc5H6aVTlw/0.jpg`}//${result.videoId}
-              className="w-225 md:w-300 md:h-100"
+              src={`https://img.youtube.com/vi/${result.videoId}/0.jpg`}//if u want it to work plug this in -> Poc5H6aVTlw
               width={425}
               height={310}
               alt="shipping"
