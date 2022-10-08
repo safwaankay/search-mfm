@@ -7,6 +7,6 @@ module.exports = withPWA({
     skipWaiting: true,
   },
   images: {
-    domains: ["assets.stickpng.com", "i.imgur.com"],
+    domains: ["assets.stickpng.com", "i.imgur.com", "img.youtube.com"],
   },
 });

@@ -74,7 +74,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row space-y-0 w-[90%] justify-center mt-8 space-x-3 sm:space-x-4">
-            <button type="submit" onClick={search} className="btn">
+            <button type="submit" onClick={search} className="btn" >
               Search MFM
             </button>
             {/* <button onClick={search} className="btn">
