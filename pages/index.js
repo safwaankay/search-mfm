@@ -9,7 +9,7 @@ import Avatar from "../components/Avatar";
 import Footer from "../components/Footer";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { getData, useGetData } from "./api/getData.js";
+import { useGetData } from "./api/getData.js";
 
 export default function Home() {
   const router = useRouter();

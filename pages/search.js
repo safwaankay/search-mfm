@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import MockResponse from "../data/MockResponse";
 import { useRouter } from "next/router";
 import SearchResults from "../components/SearchResults";
-import { useGetData } from "./api/getData.js";
+import { useGetData } from "./api/getData";
 
 export default function Search({ results }) {
   const router = useRouter();
