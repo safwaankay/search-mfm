@@ -7,15 +7,25 @@ import {
 } from "@heroicons/react/solid";
 import Avatar from "../components/Avatar";
 import Footer from "../components/Footer";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { useGetData } from "./api/getData.js";
 
 export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
+  const data = useGetData(router.query.term);
+  const [e, setE] = useState();
+  const [term, setTerm] = useState();
+  console.log(data);
+  function constructString(terms) {
+    return terms.replaceAll(" ", "+").toString();
+  }
   function search(e) {
     e.preventDefault();
-    const term = searchInputRef.current.value;
+
+    const term = constructString(searchInputRef.current.value);
+    console.log("term:", term);
     if (!term) return;
 
     router.push(`/search?term=${term}`);
@@ -39,18 +49,18 @@ export default function Home() {
 
         {/* Header */}
         {/* <header className="flex w-full items-center justify-between p-5 text-sm text-gray-700 dark:text-gray-300 md:font-medium"> */}
-          {/* Left */}
-          {/* <div className="flex space-x-4 items-center">
+        {/* Left */}
+        {/* <div className="flex space-x-4 items-center">
             <p className="link">About</p>
             <p className="link">Store</p>
           </div> */}
-          {/* Right */}
-          {/* <div className="flex space-x-4 items-center"> */}
-            {/* <p>Gmail</p> */}
-            {/* <p>Images</p> */}
-            {/* <ViewGridIcon className="h-10 w-10 p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#111] rounded-full" /> */}
-            {/* <Avatar url="/img/profile.jpg" /> */}
-          {/* </div> */}
+        {/* Right */}
+        {/* <div className="flex space-x-4 items-center"> */}
+        {/* <p>Gmail</p> */}
+        {/* <p>Images</p> */}
+        {/* <ViewGridIcon className="h-10 w-10 p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-[#111] rounded-full" /> */}
+        {/* <Avatar url="/img/profile.jpg" /> */}
+        {/* </div> */}
         {/* </header> */}
         {/* Body */}
 

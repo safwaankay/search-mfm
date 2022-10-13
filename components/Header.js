@@ -7,12 +7,17 @@ import HeaderOptions from "./HeaderOptions";
 
 export default function Header() {
   const router = useRouter();
-  const [searchInput, setSearchInput] = useState(router.query.term);
 
+  const [searchInput, setSearchInput] = useState(router.query.term);
+  function constructString(terms) {
+    return terms.replaceAll(" ", "+").toString();
+  }
   function search(e) {
     e.preventDefault();
+    const term = constructString(searchInput);
+    console.log(term);
     if (!searchInput) return;
-    router.push(`/search?term=${searchInput}`);
+    router.push(`/search?term=${term}`);
   }
 
   return (
