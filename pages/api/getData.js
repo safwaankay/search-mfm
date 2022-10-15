@@ -5,11 +5,14 @@ export function useGetData(terms) {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/v1/videoData/${terms}`, {
-      headers: {
-        accepts: "application/json",
-      },
-    })
+    fetch(
+      `https://limitless-shore-40175.herokuapp.com/api/v1/videoData/${terms}`,
+      {
+        headers: {
+          accepts: "application/json",
+        },
+      }
+    )
       .then((response) => {
         return response.json();
       })

@@ -25,12 +25,12 @@ export default function Header() {
       <div className="flex w-full p-6 items-center justify-between">
         <div className="flex items-center flex-col sm:flex-row w-full ">
           <Image
-            src="/../public/img/SearchMFM.png"
+            src="../public/img/SearchMFM.png"
             height={40}
             width={120}
             className="cursor-pointer"
             onClick={() => router.push("/")}
-            alt="Google"
+            alt="SearchMFM"
           />
 
           <form className="flex w-full px-6 py-3 mt-5 sm:mt-0 sm:ml-10 sm:mr-5 border-gray-200 rounded-full shadow-md max-w-3xl flex-grow items-center dark:bg-secondary-dark">
