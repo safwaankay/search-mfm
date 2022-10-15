@@ -70,7 +70,7 @@ export default function Home() {
             className="w-225 md:w-300 md:h-100"
             width={500}
             height={100}
-            alt="search image"
+            alt="mfm"
           />
 
           <div className="flex w-full mt-5 hover:shadow focus-within:shadow  max-w-md rounded-full border border-gray-500 md:hover:border-white dark:bg-gray-700md:dark:hover:border-gray-100 px-5 py-2 sm:py-3 items-center sm:max-w-xl lg:max-w-2xl">

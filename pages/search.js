@@ -22,10 +22,21 @@ export default function Search({ results }) {
   );
 }
 
+<<<<<<< HEAD
+export async function getServerSideProps(context) {
+  const useDummyData = true;
+  const startIndex = context.query.start || "0";
+  const data = useDummyData
+    ? MockResponse
+    : await fetch(
+        `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
+      ).then((response) => response.json());
+=======
 // export async function getServerSideProps(context) {
 //   const useDummyData = false;
 //   const startIndex = context.query.start || "0";
 //   // const data = useDummyData ? MockResponse : useGetData(context.query.term);
+>>>>>>> 4bb55d471599d5dba2a8132982ed8a7fb8aa59b7
 
 //   return {
 //     props: {
